@@ -6,7 +6,7 @@ import javax.persistence.*;
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private long id;
 
     private String name;
     private String ssn;
@@ -14,11 +14,11 @@ public class Employee {
     @JoinColumn(name= "laptop_id")
     private Laptop laptop;
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 

@@ -6,14 +6,14 @@ import javax.persistence.*;
 public class Laptop {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private long id;
     private String brand;
     private String model;
 
     @OneToOne(mappedBy = "laptop")
     private Employee employee;
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
